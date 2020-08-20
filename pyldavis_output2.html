@@ -1,0 +1,41 @@
+
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/bmabey/pyLDAvis/files/ldavis.v1.0.0.css">
+
+
+<div id="ldavis_el906828562049007761973732930"></div>
+<script type="text/javascript">
+
+var ldavis_el906828562049007761973732930_data = {"R": 6, "lambda.step": 0.01, "token.table": {"Term": ["\u3042\u306a\u305f", "\u308f\u305f\u3057", "\u308f\u305f\u3057", "\u30a8\u30b9", "\u30c6\u30b9\u30c8", "\u30db\u30b2", "\u5f7c"], "Topic": [1, 2, 3, 3, 3, 2, 1], "Freq": [0.78154057264328, 0.4003223776817322, 0.4003223776817322, 0.7732048630714417, 0.7730937004089355, 0.8092178702354431, 0.7810755372047424]}, "topic.order": [1, 2, 3], "tinfo": {"Term": ["\u308f\u305f\u3057", "\u30db\u30b2", "\u30c6\u30b9\u30c8", "\u30a8\u30b9", "\u5f7c", "\u3042\u306a\u305f", "\u5f7c", "\u3042\u306a\u305f", "\u30db\u30b2", "\u30c6\u30b9\u30c8", "\u30a8\u30b9", "\u308f\u305f\u3057", "\u30db\u30b2", "\u308f\u305f\u3057", "\u30a8\u30b9", "\u30c6\u30b9\u30c8", "\u3042\u306a\u305f", "\u5f7c", "\u30c6\u30b9\u30c8", "\u30a8\u30b9", "\u308f\u305f\u3057", "\u30db\u30b2", "\u3042\u306a\u305f", "\u5f7c"], "Total": [2.0, 1.0, 1.0, 1.0, 3.0, 3.0, 3.840857744216919, 3.8385722637176514, 1.2357611656188965, 1.293504238128662, 1.293318271636963, 2.4979867935180664, 1.2357611656188965, 2.4979867935180664, 1.293318271636963, 1.293504238128662, 3.8385722637176514, 3.840857744216919, 1.293504238128662, 1.293318271636963, 2.4979867935180664, 1.2357611656188965, 3.8385722637176514, 3.840857744216919], "Category": ["Default", "Default", "Default", "Default", "Default", "Default", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3"], "loglift": [6.0, 5.0, 4.0, 3.0, 2.0, 1.0, 0.4307999908924103, 0.42890000343322754, -0.8830999732017517, -0.8980000019073486, -0.8980000019073486, -1.3756999969482422, 1.25409996509552, 0.603600025177002, 0.004399999976158142, -0.003000000026077032, -1.107200026512146, -1.1275999546051025, 0.8421000242233276, 0.8399999737739563, 0.760200023651123, -0.3296999931335449, -1.462499976158142, -1.4723999500274658], "Freq": [2.0, 1.0, 1.0, 1.0, 3.0, 3.0, 3.408478021621704, 3.399980068206787, 0.29473355412483215, 0.30395448207855225, 0.3038962185382843, 0.3640249967575073, 0.7107768654823303, 0.7496822476387024, 0.2131841778755188, 0.21163487434387207, 0.20818524062633514, 0.204117089509964, 0.7779148817062378, 0.7762379050254822, 1.3842793703079224, 0.2302507758140564, 0.23040692508220673, 0.22826266288757324], "logprob": [6.0, 5.0, 4.0, 3.0, 2.0, 1.0, -0.862500011920929, -0.8650000095367432, -3.310499906539917, -3.2797000408172607, -3.279900074005127, -3.099299907684326, -1.17330002784729, -1.1200000047683716, -2.377500057220459, -2.384700059890747, -2.40120005607605, -2.4209001064300537, -1.5396000146865845, -1.5418000221252441, -0.9632999897003174, -2.7571001052856445, -2.7564001083374023, -2.7657999992370605]}, "plot.opts": {"xlab": "PC1", "ylab": "PC2"}, "mdsDat": {"x": [0.1805681644510395, -0.06742653271250106, -0.11314163173853845], "cluster": [1, 1, 1], "y": [0.00473824381636471, -0.030442209581748213, 0.025703965765383533], "Freq": [57.67905044555664, 16.41128921508789, 25.909658432006836], "topics": [1, 2, 3]}};
+
+function LDAvis_load_lib(url, callback){
+  var s = document.createElement('script');
+  s.src = url;
+  s.async = true;
+  s.onreadystatechange = s.onload = callback;
+  s.onerror = function(){console.warn("failed to load library " + url);};
+  document.getElementsByTagName("head")[0].appendChild(s);
+}
+
+if(typeof(LDAvis) !== "undefined"){
+   // already loaded: just create the visualization
+   !function(LDAvis){
+       new LDAvis("#" + "ldavis_el906828562049007761973732930", ldavis_el906828562049007761973732930_data);
+   }(LDAvis);
+}else if(typeof define === "function" && define.amd){
+   // require.js is available: use it to load d3/LDAvis
+   require.config({paths: {d3: "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min"}});
+   require(["d3"], function(d3){
+      window.d3 = d3;
+      LDAvis_load_lib("https://cdn.rawgit.com/bmabey/pyLDAvis/files/ldavis.v1.0.0.js", function(){
+        new LDAvis("#" + "ldavis_el906828562049007761973732930", ldavis_el906828562049007761973732930_data);
+      });
+    });
+}else{
+    // require.js not available: dynamically load d3 & LDAvis
+    LDAvis_load_lib("https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js", function(){
+         LDAvis_load_lib("https://cdn.rawgit.com/bmabey/pyLDAvis/files/ldavis.v1.0.0.js", function(){
+                 new LDAvis("#" + "ldavis_el906828562049007761973732930", ldavis_el906828562049007761973732930_data);
+            })
+         });
+}
+</script>
